@@ -20,7 +20,10 @@
       color: #333;
     }
     .video-wrapper {
-      position: relative;
+      position: sticky;
+      top: 0;
+      max-width: 640px;
+      margin: 0 auto;
       padding-bottom: 56.25%; /* 16:9 aspect ratio */
       height: 0;
       overflow: hidden;
@@ -38,8 +41,9 @@
   <div class="container">
     <script>
       const md = window.markdownit({linkify: true, html: true});
-      const result = md.render(`# Testing In-Browser Markdown Rendering And YouTube Embed
-`);
+      const result = md.render(`
+        # Testing In-Browser Markdown Rendering And YouTube Embed
+      `);
       document.body.insertAdjacentHTML("beforeend", result);
     </script>
     <div class="video-wrapper">
