@@ -5,7 +5,7 @@
   </head>
   <body>
     <script>
-    const md = window.markdownit();
+    const md = window.markdownit({linkify: true, html: true});
     const result = md.render(`
 # Testing In-Browser Markdown Rendering And YouTube Embed
 
