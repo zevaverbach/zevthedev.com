@@ -38,9 +38,8 @@
   <div class="container">
     <script>
       const md = window.markdownit({linkify: true, html: true});
-      const result = md.render(`
-        # Testing In-Browser Markdown Rendering And YouTube Embed
-      `);
+      const result = md.render(`# Testing In-Browser Markdown Rendering And YouTube Embed
+`);
       document.body.insertAdjacentHTML("beforeend", result);
     </script>
     <div class="video-wrapper">
