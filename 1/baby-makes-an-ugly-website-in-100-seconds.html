@@ -19,11 +19,13 @@
     h1 {
       color: #333;
     }
+    .video-container {
+      max-width: 640px;
+      margin: 0 auto;
+    }
     .video-wrapper {
       position: sticky;
       top: 0;
-      max-width: 640px;
-      margin: 0 auto;
       padding-bottom: 56.25%; /* 16:9 aspect ratio */
       height: 0;
       overflow: hidden;
@@ -46,8 +48,10 @@
         document.querySelector('.markdown-content').insertAdjacentHTML("beforeend", result);
       </script>
     </div>
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/QJ38en58Onk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="video-container">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/QJ38en58Onk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </body>
