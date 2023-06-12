@@ -38,13 +38,13 @@
 </head>
 <body>
   <div class="container">
-    <script>
-      const md = window.markdownit({linkify: true, html: true});
-      const result = md.render(`
-        # Testing In-Browser Markdown Rendering And YouTube Embed
-      `);
-      document.body.insertAdjacentHTML("beforeend", result);
-    </script>
+    <div class="markdown-content">
+      <script>
+        const md = window.markdownit({linkify: true, html: true});
+        const result = md.render('# Testing In-Browser Markdown Rendering And YouTube Embed');
+        document.querySelector('.markdown-content').insertAdjacentHTML("beforeend", result);
+      </script>
+    </div>
     <div class="video-wrapper">
       <iframe src="https://www.youtube.com/embed/QJ38en58Onk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
